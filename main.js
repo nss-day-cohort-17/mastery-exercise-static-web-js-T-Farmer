@@ -31,7 +31,8 @@ function  pineTree(treeObject){
     var treeHeight =  parseInt(treeHeight);
     var character =   character.value;
     var buildTree =
-    var build =
+    var output =
+    var spaces = " "
 
 // Need a for-loop that +2 per iteration; levels = 7, base = 13
 // Help from Callan: Use join function instead of just (+2) per iteration, as this allows for
@@ -44,6 +45,8 @@ function  pineTree(treeObject){
 }
 
 // If else function build trial...
+// Set as switch statement
+// I need a spaces var!!
 
     if (treeHeight = "") {
         if (character = "") {
@@ -53,3 +56,4 @@ function  pineTree(treeObject){
           alert("OK. How tall do you want your tree?");
         }
     }
+    (var i = treeHeight )( i * 2)
