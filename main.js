@@ -42,3 +42,14 @@ function  pineTree(treeObject){
         activeLevel = Array(treeHeight + 1).join (" ")
     }
 }
+
+// If else function build trial...
+
+    if (treeHeight = "") {
+        if (character = "") {
+
+        }
+        else if (character.length !== 1)  {
+
+        }
+    }
