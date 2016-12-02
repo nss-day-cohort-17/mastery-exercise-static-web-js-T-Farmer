@@ -24,16 +24,21 @@
 //  ***********
 // ************* -->
 
+
+// Will this be easier for me as join function or if else statement. Exploring...
+
 function  pineTree(treeObject){
-    var treeHeight =
-    var character =
+    var treeHeight =  parseInt(treeHeight);
+    var character =   character.value;
     var buildTree =
     var build =
 
 // Need a for-loop that +2 per iteration; levels = 7, base = 13
+// Help from Callan: Use join function instead of just (+2) per iteration, as this allows for
+// balance and left spacing needed to build the tree
 
     for (var i = 0; i > treeHeight; i++)  {
         activeLevel = "";
-        activeLevel = Array(treeHeight + 1).join ("")
+        activeLevel = Array(treeHeight + 1).join (" ")
     }
 }
