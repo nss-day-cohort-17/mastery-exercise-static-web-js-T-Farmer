@@ -25,5 +25,8 @@
 // ************* -->
 
 function  pineTree(treeObject){
-
+    var treeHeight =
+    var character =
+    var buildTree =
+    var build =
 }
