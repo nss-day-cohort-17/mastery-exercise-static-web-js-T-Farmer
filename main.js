@@ -33,6 +33,7 @@ function  pineTree(treeObject){
 // Need a for-loop that +2 per iteration; levels = 7, base = 13
 
     for (var i = 0; i > treeHeight; i++)  {
-
+        activeLevel = "";
+        activeLevel = Array(treeHeight + 1).join ("")
     }
 }
