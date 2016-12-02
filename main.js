@@ -37,7 +37,7 @@ function  pineTree(treeObject){
 // Help from Callan: Use join function instead of just (+2) per iteration, as this allows for
 // balance and left spacing needed to build the tree
 
-    for (var i = 0; i > treeHeight; i++)  {
+    for (var i = 0; i < treeHeight; i++)  {
         activeLevel = "";
         activeLevel = Array(treeHeight + 1).join (" ")
     }
@@ -47,9 +47,9 @@ function  pineTree(treeObject){
 
     if (treeHeight = "") {
         if (character = "") {
-
+          alert("What are you using to build this tree???");
         }
         else if (character.length !== 1)  {
-
+          alert("OK. How tall do you want your tree?");
         }
     }
