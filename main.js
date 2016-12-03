@@ -26,21 +26,24 @@
 
 
 // Will this be easier for me as join function or if else statement. Exploring...
+// Variables corrected and set
 
 function  pineTree(treeObject){
-    var treeHeight =  parseInt(treeHeight);
-    var character =   character.value;
-    var buildTree =
-    var output =
-    var spaces = " "
+    var treeHeight =  parseInt(treeObject.height);
+    var charChzn =   treeObject.character;
+    var treeBase;
+    var output =    document.getElementById("displayTree");
+    var displayTree =   "";
+
 
 // Need a for-loop that +2 per iteration; levels = 7, base = 13
 // Help from Callan: Use join function instead of just (+2) per iteration, as this allows for
 // balance and left spacing needed to build the tree
+// Got array properly framed including join argument to create needed spacing
 
     for (var i = 0; i < treeHeight; i++)  {
-        activeLevel = "";
-        activeLevel = Array(treeHeight + 1).join (" ")
+        treeBase = "";
+        treeBase += Array(treeHeight - 1).join (" ")
     }
 }
 
