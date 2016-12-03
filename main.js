@@ -28,12 +28,12 @@
 // Will this be easier for me as join function or if else statement. Exploring...
 // Variables corrected and set
 
-function  pineTree(treeObject){
+function  pineTree(treeObject)  {
     var treeHeight =  parseInt(treeObject.height);
     var charChzn =   treeObject.character;
     var treeBase;
-    var output =    document.getElementById("displayTree");
-    var displayTree =   "";
+    var buildTree =    document.getElementById("buildTree");
+    var buildTreeDiv =   "";
 
 
 // Need a for-loop that +2 per iteration; levels = 7, base = 13
@@ -43,20 +43,11 @@ function  pineTree(treeObject){
 
     for (var i = 0; i < treeHeight; i++)  {
         treeBase = "";
-        treeBase += Array(treeHeight - 1).join (" ")
+        treeBase += Array(treeHeight - 1).join(" ");
+        treeBase += Array((1 + 2 * i)).join(charChzn);
+        treeBase += Array(treeHeight - 1).join(" ");
+        buildTreeDiv += "<div>" + treeBase + "</div>"
+        buildTree.innerHTML = buildTreeDiv;
+        console.log(treeBase);
     }
 }
-
-// If else function build trial...
-// Set as switch statement
-// I need a spaces var!!
-
-    if (treeHeight = "") {
-        if (character = "") {
-          alert("What are you using to build this tree???");
-        }
-        else if (character.length !== 1)  {
-          alert("OK. How tall do you want your tree?");
-        }
-    }
-    (var i = treeHeight )( i * 2)
