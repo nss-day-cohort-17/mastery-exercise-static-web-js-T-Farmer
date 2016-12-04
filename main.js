@@ -41,13 +41,20 @@ function  pineTree(treeObject)  {
 // balance and left spacing needed to build the tree
 // Got array properly framed including join argument to create needed spacing
 
-    for (var i = 0; i < treeHeight; i++)  {
-        treeBase = "";
-        treeBase += Array(treeHeight - 1).join(" ");
-        treeBase += Array((1 + 2 * i)).join(charChzn);
-        treeBase += Array(treeHeight - 1).join(" ");
-        buildTreeDiv += "<div>" + treeBase + "</div>"
-        buildTree.innerHTML = buildTreeDiv;
-        console.log(treeBase);
-    }
+
+// Function that builds tree based on user input from index.html
+
+function pineTreeObject(){
+    baseValue = document.getElementById("treeHeight").value;
+    charValue = document.getElementById("charChzn").value;
+
+if (baseValue && charValue) {
+    alert("These are not valid options. Please try again.");
 }
+
+else    pineTree({
+            height: baseValue;
+            character: charChzn;
+    })
+
+};
