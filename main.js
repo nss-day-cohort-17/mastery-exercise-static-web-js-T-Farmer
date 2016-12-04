@@ -28,7 +28,7 @@
 // Will this be easier for me as join function or if else statement. Exploring...
 // Variables corrected and set
 
-function  pineTree(treeObject)  {
+function  pineTree(treeObject){
     var treeHeight =  parseInt(treeObject.height);
     var charChzn =   treeObject.character;
     var treeBase;
@@ -53,8 +53,8 @@ if (baseValue && charValue) {
 }
 
 else    pineTree({
-            height: baseValue;
-            character: charChzn;
+            height: baseValue,
+            character: charChzn
     })
 
 };
