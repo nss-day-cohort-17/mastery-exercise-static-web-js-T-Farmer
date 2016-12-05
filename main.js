@@ -41,12 +41,13 @@ function  pineTree(treeObject){
 // balance and left spacing needed to build the tree
 // Got array properly framed including join argument to create needed spacing
 
-
+// added treeHeight array again to add other space and create cascading effect
 
 for (var i = 0; i < treeHeight; i++){
     treeBase = "";
-    treeBase += array(treeHeight- 1).join(" ");
+    treeBase += array(treeHeight - 1).join(" ");
     treeBase += array((1 + 2 * i) + 1).join(charChzn);
+    treeBase += array(treeHeight - 1).join(" ");
 }
 
 // Function that builds tree based on user input from index.html
