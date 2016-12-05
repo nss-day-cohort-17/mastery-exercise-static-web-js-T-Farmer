@@ -71,3 +71,27 @@ else    pineTree({
     })
 
 };
+
+
+
+// Set var, event listeners, and input function
+
+
+
+var button = document.getElementById("pineTree");
+var baseID = document.getElementById("treeHeight");
+var charID = document.getElementById("charChzn");
+
+
+
+button.addEventListener("click", pineTreeObject);
+baseID.addEventListener("onkeydown", enterPressed);
+charID.addEventListener("onkeydown", enterPressed);
+
+
+
+function enterPressed (x) {
+    if (x.keyCode === 13 && (baseID === document.activeElement || charID === document.activeElement)){
+        pineTreeObject();
+    }
+}
