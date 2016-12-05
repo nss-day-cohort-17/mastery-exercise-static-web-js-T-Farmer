@@ -50,7 +50,7 @@ for (var i = 0; i < treeHeight; i++) {
     treeBase += array(treeHeight - 1).join(" ");
     buildTreeDiv += "<div>" + treeBase + "</div>";
     buildTree.innerHTML = buildTreeDiv;
-    console.log(treeBase);
+    console.log(pineTreeObject);
     };
 }
 
@@ -79,19 +79,20 @@ else    pineTree({
 
 
 
-var button = document.getElementById("pineTree");
+var buildTheTree = document.getElementById("pineTree");
 var baseID = document.getElementById("treeHeight");
 var charID = document.getElementById("charChzn");
 
 
 
-button.addEventListener("click", pineTreeObject);
-baseID.addEventListener("onkeydown", enterPressed);
-charID.addEventListener("onkeydown", enterPressed);
+buildTheTree.addEventListener("click", pineTreeObject);
+baseID.addEventListener("onkeydown", pressedEnter);
+charID.addEventListener("onkeydown", pressedEnter);
+
 
 // SHEESH
 
-function enterPressed (x) {
+function pressedEnter (x) {
     if (x.keyCode === 13 && (baseID === document.activeElement || charID === document.activeElement)){
         pineTreeObject();
     }
