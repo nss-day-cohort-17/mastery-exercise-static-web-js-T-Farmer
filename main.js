@@ -28,12 +28,12 @@
 // Will this be easier for me as join function or if else statement. Exploring...
 // Variables corrected and set
 
-function  pineTree(treeObject){
-    var treeHeight =  parseInt(treeObject.height);
-    var charChzn =   treeObject.character;
+function pineTree(treeObject){
+    var treeHeight = parseInt(treeObject.height);
+    var charChzn = treeObject.character;
     var treeBase;
-    var buildTree =    document.getElementById("buildTree");
-    var buildTreeDiv =   "";
+    var buildTree = document.getElementById("buildTree");
+    var buildTreeDiv = "";
 
 
 // Need a for-loop that +2 per iteration; levels = 7, base = 13
@@ -48,6 +48,10 @@ for (var i = 0; i < treeHeight; i++){
     treeBase += array(treeHeight - 1).join(" ");
     treeBase += array((1 + 2 * i) + 1).join(charChzn);
     treeBase += array(treeHeight - 1).join(" ");
+    buildTreeDiv += "<div>" + treeBase + "</div";
+    buildTree.innerHTML = buildTreeDiv;
+    console.log(treeBase);
+
 }
 
 // Function that builds tree based on user input from index.html
