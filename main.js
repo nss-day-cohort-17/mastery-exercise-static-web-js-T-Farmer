@@ -85,9 +85,9 @@ var charID = document.getElementById("charChzn");
 
 
 
-button.addEventListener("click",
-baseID.addEventListener("onkeydown",
-charID.addEventListener("onkeydown",
+button.addEventListener("click", pineTreeObject);
+baseID.addEventListener("onkeydown", enterPressed);
+charID.addEventListener("onkeydown", enterPressed);
 
 // SHEESH
 
