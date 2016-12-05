@@ -43,7 +43,7 @@ function pineTree(treeObject){
 
 // added treeHeight array again to add other space and create cascading effect
 
-for (var i = 0; i < treeHeight; i++){
+for (var i = 0; i < treeHeight; i++) {
     treeBase = "";
     treeBase += array(treeHeight - 1).join(" ");
     treeBase += array((1 + 2 * i) + 1).join(charChzn);
@@ -52,8 +52,9 @@ for (var i = 0; i < treeHeight; i++){
     buildTree.innerHTML = buildTreeDiv;
     console.log(treeBase);
     };
-
 }
+
+
 
 // Function that builds tree based on user input from index.html
 
@@ -84,9 +85,9 @@ var charID = document.getElementById("charChzn");
 
 
 
-button.addEventListener("click", pineTreeObject);
-baseID.addEventListener("onkeydown", enterPressed);
-charID.addEventListener("onkeydown", enterPressed);
+button.addEventListener("click",
+baseID.addEventListener("onkeydown",
+charID.addEventListener("onkeydown",
 
 // SHEESH
 
