@@ -48,9 +48,10 @@ for (var i = 0; i < treeHeight; i++){
     treeBase += array(treeHeight - 1).join(" ");
     treeBase += array((1 + 2 * i) + 1).join(charChzn);
     treeBase += array(treeHeight - 1).join(" ");
-    buildTreeDiv += "<div>" + treeBase + "</div";
+    buildTreeDiv += "<div>" + treeBase + "</div>";
     buildTree.innerHTML = buildTreeDiv;
     console.log(treeBase);
+    };
 
 }
 
