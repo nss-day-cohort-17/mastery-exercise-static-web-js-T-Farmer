@@ -88,7 +88,7 @@ button.addEventListener("click", pineTreeObject);
 baseID.addEventListener("onkeydown", enterPressed);
 charID.addEventListener("onkeydown", enterPressed);
 
-
+// SHEESH
 
 function enterPressed (x) {
     if (x.keyCode === 13 && (baseID === document.activeElement || charID === document.activeElement)){
