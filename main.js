@@ -1,37 +1,6 @@
-// <!-- Create a tree function that should build a pine tree out of a character in the Chrome dev tools console.
-
-// It accepts a single object as an argument. The object should have two key/value pairs.
-
-// A key that specifies the height of the pine tree.
-// The value for the height of the tree should be from user input in a <input type="text"> field in the DOM.
-// A key that specifies which character to use to build the pine tree.
-// The character to use should be from user input in a <input type="text"> field in the DOM.
-// Once the user enters in a number, and a character, the user can either then just press the enter key (as long as the cursor is in one of the input fields), or click a button that is labeled "Grow your tree" and the tree should be shown in the console. This requires you to add an event listener to the button, as well as an event listener for the enter/return key.
-
-// If either of the input fields does not have a value in it when the user presses the enter key, or presses the button, then display an alert stating that both fields must have a value.
-
-// Grow your tree
-
-// Example
-
-// Here's what the pine tree should look like when you specify a height of 7, and use the asterisk character.
-
-//       *
-//      ***
-//     *****
-//    *******
-//   *********
-//  ***********
-// ************* -->
-
-
-// Will this be easier for me as join function or if else statement. Exploring...
-// Variables corrected and set
-
 function displayTree(treeObject){
     var treeHeight = parseInt(treeObject.height);
     var charChzn = treeObject.character;
-    var treeBase;
     var pineTree = document.getElementById("pineTree");
     var pineTreeHTML = "";
 
@@ -44,15 +13,30 @@ function displayTree(treeObject){
 // added treeHeight array again to add other space and create cascading effect
 
 for (var i = 0; i < treeHeight; i++) {
-    treeBase = "";
     treeBase += array(treeHeight - 1).join(" ");
     treeBase += array((1 + 2 * i) + 1).join(charChzn);
     treeBase += array(treeHeight - 1).join(" ");
     pineTreeHTML += "<div>" + treeBase + "</div>";
     pineTree.innerHTML = pineTreeHTML;
-    console.log(pineTreeHTML());
+    console.log();
     };
 }
+
+// var xmas = function(tree) {
+//   if (pineHieght.value === "", character.value === "") {
+//   alert("Can't leave anything blank! Please fill in both questions.");
+// }
+//   tree.height = pineHieght.value
+//   tree.key = character.value
+//   for (var i = 0; i < tree.height; i++) {
+//   var design = " ".repeat(tree.height - i);
+//   design += tree.key.repeat((2 * i) + 1);
+//   console.log(design);
+
+
+
+
+
 
 
 
@@ -66,9 +50,9 @@ if (baseValue && charValue) {
     alert("These are not valid options. Please try again.");
 }
 
-else    pineTree({
+    pineTree({
             height: baseValue,
-            character: charChzn
+            character: charValue
     })
 
 };
@@ -85,15 +69,15 @@ var charID = document.getElementById("charChzn");
 
 
 
-buildTheTree.addEventListener("click", pineTreeObject);
-baseID.addEventListener("onkeydown", pressedEnter);
-charID.addEventListener("onkeydown", pressedEnter);
+buildTheTree.addEventListener("click", build);
+baseID.addEventListener("onkeypress", pressedEnter);
+charID.addEventListener("onkeypress", pressedEnter);
 
 
 // SHEESH
 
-function pressedEnter (x) {
-    if (x.keyCode === 13 && (baseID === document.activeElement || charID === document.activeElement)){
+function pressedEnter (a) {
+    if (a.keyCode === 13 && (baseID === document.activeElement || charID === document.activeElement)){
         pineTreeObject();
     }
-}
+};
