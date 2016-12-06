@@ -1,9 +1,9 @@
 function displayTree(treeObject) {
     numberOfChar = 1;
-    var spaces = buildTree.height - 1;
-    for(var i = 0; i < buildTree.height; i++) {
-        addSpaces(spaces);
-        addChar(buildTree.charChzn);
+    var spaces = treeObject.height - 1;
+    for(var i = 0; i < treeObject.height; i++) {
+        addSpaces(treeObject.spaces);
+        addChar(treeObject.charChzn);
         printLine();
         spaces--;
     }
@@ -51,20 +51,34 @@ function spaces(x) {
     }
 }
 
+function addChar(selectedChar) {
+    for (var i = 1; i <= numberOfChar; i++) {
+        charString += selectedChar;
+    }
+    numberOfChar += 2
+}
+
+
+function printLine() {
+    console.log(charString + "\n");
+    charString = "";
+}
 
 
 //Event listeners
 
 
-button.addEventListener("click", getInput);
+button.addEventListener("click", userInput);
 selectedHeight.addEventListener("keypress", enterPressed);
-charUsed.addEventListener("keypress", enterPressed);
+charChzn.addEventListener("keypress", enterPressed);
 
 
 // SHEESH
 
-function pressedEnter (a) {
-    if (a.keyCode === 13 && (baseID === document.activeElement || charID === document.activeElement)){
-        pineTreeObject();
+
+function enterPressed(event) {
+    var key = event.which || event.keyCode;
+    if (key === 13) {
+        userInput();
     }
-};
+}
