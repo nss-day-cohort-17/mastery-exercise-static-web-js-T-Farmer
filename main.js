@@ -29,7 +29,7 @@ function userInput() {
             height: selectedHeight.value,
             charChzn: charChzn.value
         };
-        displayTree(pineTree);
+        console.log(userInput.length);
     }
 }
 
