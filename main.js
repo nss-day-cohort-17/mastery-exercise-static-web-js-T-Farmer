@@ -11,7 +11,6 @@ function displayTree(treeObject) {
 }
 
 
-// Need a for-loop that +2 per iteration; levels = 7, base = 13
 // Help from Callan: Use join function instead of just (+2) per iteration, as this allows for
 // balance and left spacing needed to build the tree
 // Got array properly framed including join argument to create needed spacing
@@ -29,7 +28,7 @@ function userInput() {
             height: selectedHeight.value,
             charChzn: charChzn.value
         };
-        console.log(userInput.length);
+        console.log(displayTree.length());
     }
 }
 
@@ -41,6 +40,7 @@ var selectedHeight = document.getElementById("selectedHeight");
 var button = document.getElementById("buildButton");
 var charChzn = document.getElementById("charChzn");
 
+
 var numberOfChar = 1;
 var charString = "";
 
@@ -50,6 +50,7 @@ function spaces(x) {
         charString += " ";
     }
 }
+
 
 function addChar(selectedChar) {
     for (var i = 1; i <= numberOfChar; i++) {
