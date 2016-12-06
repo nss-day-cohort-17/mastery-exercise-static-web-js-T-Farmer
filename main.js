@@ -11,7 +11,6 @@ function displayTree(treeObject) {
 }
 
 
-
 // Need a for-loop that +2 per iteration; levels = 7, base = 13
 // Help from Callan: Use join function instead of just (+2) per iteration, as this allows for
 // balance and left spacing needed to build the tree
@@ -20,6 +19,7 @@ function displayTree(treeObject) {
 // added treeHeight array again to add other space and create cascading effect
 
 // Function that builds tree based on user input from index.html
+
 
 function userInput() {
     if(charChzn.value === "" || selectedHeight.value === "") {
@@ -34,9 +34,7 @@ function userInput() {
 }
 
 
-
 // Set var, event listeners, and input function
-
 
 
 var selectedHeight = document.getElementById("selectedHeight");
@@ -44,13 +42,23 @@ var button = document.getElementById("buildButton");
 var charChzn = document.getElementById("charChzn");
 
 var numberOfChar = 1;
-var CharString = "";
+var charString = "";
 
+
+function spaces(x) {
+    for(; x > 0; x--) {
+        charString += " ";
+    }
+}
+
+
+
+//Event listeners
 
 
 button.addEventListener("click", getInput);
 selectedHeight.addEventListener("keypress", enterPressed);
-CharUsed.addEventListener("keypress", enterPressed);
+charUsed.addEventListener("keypress", enterPressed);
 
 
 // SHEESH
