@@ -19,32 +19,19 @@ function displayTree(treeObject) {
 
 // added treeHeight array again to add other space and create cascading effect
 
-
-
-
-
-
-
-
-
-
-
 // Function that builds tree based on user input from index.html
 
-function pineTreeObject(){
-    baseValue = document.getElementById("treeHeight").value;
-    charValue = document.getElementById("charChzn").value;
-
-if (baseValue && charValue) {
-    alert("These are not valid options. Please try again.");
+function userInput() {
+    if(charChzn.value === "" || selectedHeight.value === "") {
+        alert("This is not a valid option. Please try again.");
+    }   else {
+        var pineTree = {
+            height: selectedHeight.value,
+            charChzn: charChzn.value
+        };
+        displayTree(pineTree);
+    }
 }
-
-    pineTree({
-            height: baseValue,
-            character: charValue
-    })
-
-};
 
 
 
