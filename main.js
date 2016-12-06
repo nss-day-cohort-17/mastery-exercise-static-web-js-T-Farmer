@@ -1,8 +1,15 @@
-function displayTree(treeObject){
-    var treeHeight = parseInt(treeObject.height);
-    var charChzn = treeObject.character;
-    var pineTree = document.getElementById("pineTree");
-    var pineTreeHTML = "";
+function displayTree(treeObject) {
+    numberOfChar = 1;
+    var spaces = buildTree.height - 1;
+    for(var i = 0; i < buildTree.height; i++) {
+        addSpaces(spaces);
+        addChar(buildTree.charChzn);
+        printLine();
+        spaces--;
+    }
+    charString = "";
+}
+
 
 
 // Need a for-loop that +2 per iteration; levels = 7, base = 13
@@ -12,26 +19,8 @@ function displayTree(treeObject){
 
 // added treeHeight array again to add other space and create cascading effect
 
-for (var i = 0; i < treeHeight; i++) {
-    treeBase += array(treeHeight - 1).join(" ");
-    treeBase += array((1 + 2 * i) + 1).join(charChzn);
-    treeBase += array(treeHeight - 1).join(" ");
-    pineTreeHTML += "<div>" + treeBase + "</div>";
-    pineTree.innerHTML = pineTreeHTML;
-    console.log();
-    };
-}
 
-// var xmas = function(tree) {
-//   if (pineHieght.value === "", character.value === "") {
-//   alert("Can't leave anything blank! Please fill in both questions.");
-// }
-//   tree.height = pineHieght.value
-//   tree.key = character.value
-//   for (var i = 0; i < tree.height; i++) {
-//   var design = " ".repeat(tree.height - i);
-//   design += tree.key.repeat((2 * i) + 1);
-//   console.log(design);
+
 
 
 
@@ -63,15 +52,18 @@ if (baseValue && charValue) {
 
 
 
-var buildTheTree = document.getElementById("build");
-var baseID = document.getElementById("treeHeight");
-var charID = document.getElementById("charChzn");
+var selectedHeight = document.getElementById("selectedHeight");
+var button = document.getElementById("buildButton");
+var charChzn = document.getElementById("charChzn");
+
+var numberOfChar = 1;
+var CharString = "";
 
 
 
-buildTheTree.addEventListener("click", build);
-baseID.addEventListener("onkeypress", pressedEnter);
-charID.addEventListener("onkeypress", pressedEnter);
+button.addEventListener("click", getInput);
+selectedHeight.addEventListener("keypress", enterPressed);
+CharUsed.addEventListener("keypress", enterPressed);
 
 
 // SHEESH
