@@ -1,85 +1,50 @@
-function displayTree(treeObject) {
-    numberOfChar = 1;
-    var spaces = treeObject.height - 1;
-    for(var i = 0; i < treeObject.height; i++) {
-        addSpaces(treeObject.spaces);
-        addChar(treeObject.charChzn);
-        printLine();
-        spaces--;
+//redid my function to properly assign pineTree obj per Caitlin
+
+function userInput () {
+    event.preventDefault();
+    if (document.getElementById("height").value === "") {
+        alert("Please make selections for both!");
+    }   else if (document.getElementById("character").value === "") {
+        alert("Please make selections for both!");
     }
-    charString = "";
+        else {
+            var pineTree = {
+                height: "",
+                character: ""
+            }
+            pineTree.height = document.getElementById("height").value;
+            pineTree.character = document.getElementById("character").value;
+
+            tree(pineTree);
+        }
 }
 
+//function to build levels of tree using character and spacing iteration
 
-// Help from Callan: Use join function instead of just (+2) per iteration, as this allows for
-// balance and left spacing needed to build the tree
-// Got array properly framed including join argument to create needed spacing
+function tree (pineTree) {
+    for (var i = 0; i < pineTree.height; i++) {
+    console.log(' '.repeat((pineTree.height - 1) - i) + pineTree.character.repeat(2*i + 1) +'\n')
 
-// added treeHeight array again to add other space and create cascading effect
-
-// Function that builds tree based on user input from index.html
-
-
-function userInput() {
-    if(charChzn.value === "" || selectedHeight.value === "") {
-        alert("This is not a valid option. Please try again.");
-    }   else {
-        var pineTree = {
-            height: selectedHeight.value,
-            charChzn: charChzn.value
-        };
-        console.log(displayTree.length());
     }
 }
 
+//event listeners for html elements, enter, click
 
-// Set var, event listeners, and input function
-
-
-var selectedHeight = document.getElementById("selectedHeight");
-var button = document.getElementById("buildButton");
-var charChzn = document.getElementById("charChzn");
-
-
-var numberOfChar = 1;
-var charString = "";
-
-
-function spaces(x) {
-    for(; x > 0; x--) {
-        charString += " ";
-    }
-}
-
-
-function addChar(selectedChar) {
-    for (var i = 1; i <= numberOfChar; i++) {
-        charString += selectedChar;
-    }
-    numberOfChar += 2
-}
-
-
-function printLine() {
-    console.log(charString + "\n");
-    charString = "";
-}
-
-
-//Event listeners
-
-
-button.addEventListener("click", userInput);
-selectedHeight.addEventListener("keypress", enterPressed);
-charChzn.addEventListener("keypress", enterPressed);
-
-
-// SHEESH
-
-
-function enterPressed(event) {
-    var key = event.which || event.keyCode;
-    if (key === 13) {
+function enterPressed (keyboardEvent) {
+    event.preventDefault();
+    console.log(keyboardEvent)
+    if (keyboardEvent.key === "Enter") {
         userInput();
     }
 }
+
+
+
+var button = document.getElementById("button");
+button.addEventListener("click", userInput);
+
+var userHeight = document.getElementById("height");
+userHeight.addEventListener('keyup', enterPressed);
+
+var userCharacter = document.getElementById("character");
+userCharacter.addEventListener('keyup', enterPressed);
