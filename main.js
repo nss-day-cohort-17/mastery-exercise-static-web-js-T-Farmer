@@ -1,4 +1,6 @@
 //redid my function to properly assign pineTree obj per Caitlin
+//requires input of number and character
+//once conditions are met, passes into next function to build pine tree
 
 function userInput () {
     event.preventDefault();
@@ -20,6 +22,7 @@ function userInput () {
 }
 
 //function to build levels of tree using character and spacing iteration
+//and starting new line at the end of each
 
 function tree (pineTree) {
     for (var i = 0; i < pineTree.height; i++) {
@@ -28,7 +31,7 @@ function tree (pineTree) {
     }
 }
 
-//event listeners for html elements, enter, click
+//once appropriate selections are made, log to console
 
 function enterPressed (keyboardEvent) {
     event.preventDefault();
@@ -38,6 +41,7 @@ function enterPressed (keyboardEvent) {
     }
 }
 
+//event listeners for html elements, enter, click
 
 
 var button = document.getElementById("button");
